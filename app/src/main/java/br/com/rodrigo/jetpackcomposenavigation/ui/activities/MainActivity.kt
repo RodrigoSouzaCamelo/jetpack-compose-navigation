@@ -1,4 +1,4 @@
-package br.com.rodrigo.jetpackcomposenavigation
+package br.com.rodrigo.jetpackcomposenavigation.ui.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,10 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import br.com.rodrigo.jetpackcomposenavigation.ui.screens.MainScreen
 import br.com.rodrigo.jetpackcomposenavigation.ui.theme.JetpackComposeNavigationTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,22 +20,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    MainScreen()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    JetpackComposeNavigationTheme {
-        Greeting("Android")
     }
 }
